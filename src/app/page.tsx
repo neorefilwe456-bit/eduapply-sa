@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, FileText, GraduationCap, Search } from "lucide-react";
+import { CheckCircle2, FileText, GraduationCap, Search, School } from "lucide-react";
 
 const FEATURES = [
   { icon: Search, title: "Find the right fit", body: "Browse and filter universities, TVET colleges, and bursaries by province, faculty, and APS score." },
@@ -26,22 +26,67 @@ export default function HomePage() {
         </div>
       </header>
 
-      <section className="mx-auto max-w-4xl px-6 py-24 text-center">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-          Every university, college, and bursary application —{" "}
-          <span className="text-primary">in one place</span>
-        </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-          Register once, upload your documents, and let EduApply SA track every
-          application for you — from Grade 11 right through to your first year of study.
-        </p>
-        <div className="mt-8 flex justify-center gap-4">
-          <Link href="/register">
-            <Button size="lg">Create your account</Button>
-          </Link>
-          <Link href="/login">
-            <Button size="lg" variant="outline">I already have an account</Button>
-          </Link>
+      <section className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          <div>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              Every university, college, and bursary application —{" "}
+              <span className="text-primary">in one place</span>
+            </h1>
+            <p className="mt-6 max-w-xl text-lg text-muted-foreground">
+              Register once, upload your documents, and let EduApply SA track every
+              application for you — from Grade 11 right through to your first year of study.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link href="/register">
+                <Button size="lg">Create your account</Button>
+              </Link>
+              <Link href="/login">
+                <Button size="lg" variant="outline">I already have an account</Button>
+              </Link>
+            </div>
+          </div>
+
+          <div className="hidden justify-center lg:flex" style={{ perspective: "1400px" }}>
+            <div
+              className="relative h-80 w-80 transition-transform duration-500 ease-out hover:[transform:rotateY(-6deg)_rotateX(4deg)]"
+              style={{ transformStyle: "preserve-3d", transform: "rotateY(-14deg) rotateX(8deg)" }}
+            >
+              <div
+                className="absolute inset-0 rounded-2xl border border-border bg-card p-6 shadow-elevate-lg"
+                style={{ transform: "translateZ(0px)" }}
+              >
+                <School className="h-7 w-7 text-primary" />
+                <p className="mt-4 font-semibold">University of Cape Town</p>
+                <p className="text-sm text-muted-foreground">Western Cape · Closes 31 Jul</p>
+                <span className="mt-4 inline-block rounded-full bg-secondary/10 px-3 py-1 text-xs font-medium text-secondary">
+                  Submitted
+                </span>
+              </div>
+              <div
+                className="absolute inset-0 -translate-x-8 translate-y-10 rounded-2xl border border-border bg-card p-6 shadow-elevate-md"
+                style={{ transform: "translateZ(-50px) translateX(-32px) translateY(40px)" }}
+              >
+                <FileText className="h-7 w-7 text-accent" />
+                <p className="mt-4 font-semibold">Matric Certificate</p>
+                <p className="text-sm text-muted-foreground">Uploaded · 1.2MB</p>
+                <span className="mt-4 inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
+                  Approved
+                </span>
+              </div>
+              <div
+                className="absolute inset-0 translate-x-10 translate-y-24 rounded-2xl border border-border bg-card p-6 shadow-elevate-sm"
+                style={{ transform: "translateZ(-100px) translateX(40px) translateY(96px)" }}
+              >
+                <GraduationCap className="h-7 w-7 text-primary" />
+                <p className="mt-4 font-semibold">Thuthuka Bursary</p>
+                <p className="text-sm text-muted-foreground">CA(SA) · Closes 31 Aug</p>
+                <span className="mt-4 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                  Draft
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -3,19 +3,19 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-depth duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:translate-y-1",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/90",
-        accent: "bg-accent text-accent-foreground hover:bg-accent/90",
+        default: "bg-primary text-primary-foreground shadow-btn-3d hover:bg-primary/95 active:shadow-none",
+        secondary: "bg-secondary text-secondary-foreground shadow-btn-3d-secondary hover:bg-secondary/95 active:shadow-none",
+        accent: "bg-accent text-accent-foreground shadow-btn-3d hover:bg-accent/95 active:shadow-none",
         outline:
-          "border border-input bg-transparent hover:bg-muted hover:text-foreground",
-        ghost: "hover:bg-muted hover:text-foreground",
+          "border border-input bg-transparent shadow-btn-3d-outline hover:bg-muted hover:text-foreground active:shadow-none",
+        ghost: "hover:bg-muted hover:text-foreground active:translate-y-0",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        link: "text-primary underline-offset-4 hover:underline",
+          "bg-destructive text-destructive-foreground shadow-[0_4px_0_0_rgba(153,27,27,1)] hover:bg-destructive/95 active:shadow-none",
+        link: "text-primary underline-offset-4 hover:underline active:translate-y-0",
       },
       size: {
         default: "h-10 px-4 py-2",
