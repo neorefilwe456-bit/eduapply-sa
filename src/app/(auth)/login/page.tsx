@@ -35,16 +35,12 @@ export default function LoginPage() {
     }
 
     const { data: profile } = await supabase
-  .from("profiles")
-  .select("role")
-  .eq("id", data.user.id)
-  .single();
+      .from("profiles")
+      .select("role")
+      .eq("id", data.user.id)
+      .single();
 
-const role = (profile as { role?: string } | null)?.role;
-
-const isStaff =
-  role !== undefined &&
-  ["admin", "super_admin", "consultant"].includes(role);
+    const isStaff = profile?.role && ["admin", "super_admin", "consultant"].includes(profile.role);
     router.push(isStaff ? "/admin" : "/dashboard");
     router.refresh();
   }
