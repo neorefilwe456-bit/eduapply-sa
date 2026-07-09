@@ -39,6 +39,19 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        navy: {
+          DEFAULT: "#0F1F4D",
+          light: "#1D2D5E",
+        },
+        purple: {
+          DEFAULT: "#7C3AED",
+          foreground: "#FFFFFF",
+        },
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)"],
+        heading: ["var(--font-sora)"],
+        script: ["var(--font-caveat)"],
       },
       borderRadius: {
         lg: "var(--radius)",
