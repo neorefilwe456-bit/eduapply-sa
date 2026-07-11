@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { Inter, Sora, Caveat } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const sora = Sora({ subsets: ["latin"], variable: "--font-sora", weight: ["600", "700", "800"] });
-const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat", weight: ["600", "700"] });
+const poppins = Poppins({ subsets: ["latin"], variable: "--font-poppins", weight: ["600", "700", "800"] });
 
 export const metadata: Metadata = {
-  title: "EduApply SA — University, College & Bursary Applications Made Simple",
+  title: "EduApply SA — Apply Smarter. Study Sooner.",
   description:
-    "Register, upload your documents, and track every university, college, and bursary application in one place.",
+    "One platform to apply for universities, colleges, TVET institutions, bursaries and internships, and build your professional CV.",
 };
 
 export default function RootLayout({
@@ -20,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${sora.variable} ${caveat.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${poppins.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>

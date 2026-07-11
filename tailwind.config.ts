@@ -16,16 +16,20 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#2563EB",
+          DEFAULT: "#0B3D91",
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#10B981",
+          DEFAULT: "#22C55E",
           foreground: "#FFFFFF",
         },
         accent: {
-          DEFAULT: "#F59E0B",
+          DEFAULT: "#F4B400",
           foreground: "#1A1A1A",
+        },
+        blue: {
+          DEFAULT: "#2563EB",
+          foreground: "#FFFFFF",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -40,18 +44,13 @@ const config: Config = {
           foreground: "hsl(var(--card-foreground))",
         },
         navy: {
-          DEFAULT: "#0F1F4D",
-          light: "#1D2D5E",
-        },
-        purple: {
-          DEFAULT: "#7C3AED",
-          foreground: "#FFFFFF",
+          DEFAULT: "#0B3D91",
+          light: "#1D4ED8",
         },
       },
       fontFamily: {
         sans: ["var(--font-inter)"],
-        heading: ["var(--font-sora)"],
-        script: ["var(--font-caveat)"],
+        heading: ["var(--font-poppins)"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -62,7 +61,7 @@ const config: Config = {
         "elevate-sm": "0 2px 8px -2px rgba(37,99,235,0.12), 0 1px 2px rgba(15,23,42,0.06)",
         "elevate-md": "0 10px 28px -6px rgba(37,99,235,0.18), 0 3px 8px rgba(15,23,42,0.08)",
         "elevate-lg": "0 20px 48px -10px rgba(37,99,235,0.24), 0 6px 16px rgba(15,23,42,0.1)",
-        "btn-3d": "0 4px 0 0 rgba(29,78,216,1)",
+        "btn-3d": "0 4px 0 0 rgba(7,40,99,1)",
         "btn-3d-secondary": "0 4px 0 0 rgba(4,120,87,1)",
         "btn-3d-outline": "0 4px 0 0 rgba(148,163,184,0.6)",
       },
