@@ -20,3 +20,23 @@ npm-debug.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+!.env.local.example
+
+# Supabase local development metadata
+supabase/.temp/
+
+# Deployment and build files
+.vercel/
+.next/
+coverage/
+.turbo/
+
+# Private keys and certificates
+*.pem
+*.key
+*.p12
+*.pfx
